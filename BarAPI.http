@@ -4,3 +4,23 @@ GET {{BarAPI_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+# ============================
+# Cardápio de Bebidas
+# ============================
+
+### Obter todas as bebidas
+GET http://localhost:5271/api/cardapio
+Accept: application/json
+
+###
+
+### Obter apenas bebidas alcoólicas
+GET http://localhost:5271/api/cardapio/alcoolicas
+Accept: application/json
+
+###
+
+### Obter apenas bebidas não alcoólicas
+GET http://localhost:5271/api/cardapio/nao-alcoolicas
+Accept: application/json

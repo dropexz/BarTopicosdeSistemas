@@ -13,7 +13,11 @@ public class CardapioController : ControllerBase
         new Bebida { Id = 3, Nome = "Café Expresso", Preco = 4.00M, Alcoolica = false },
         new Bebida { Id = 4, Nome = "Caipirinha", Preco = 12.00M, Alcoolica = true },
         new Bebida { Id = 5, Nome = "Cerveja Pilsen", Preco = 8.00M, Alcoolica = true },
-        new Bebida { Id = 6, Nome = "Vinho Tinto", Preco = 15.00M, Alcoolica = true }
+        new Bebida { Id = 6, Nome = "Cup of Jack", Preco = 25.00M, Alcoolica = true },
+        new Bebida { Id = 7, Nome = "Cup of Gin", Preco = 20.00M, Alcoolica = true },
+        new Bebida { Id = 8, Nome = "Choop 150ml", Preco = 10.00M, Alcoolica = true },
+        new Bebida { Id = 9, Nome = "Choop de Vinho", Preco = 15.00M, Alcoolica = true },
+        new Bebida { Id = 10, Nome = "Gin + Tonica", Preco = 30.00M, Alcoolica = true }
     };
 
     [HttpGet]
