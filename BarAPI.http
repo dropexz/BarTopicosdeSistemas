@@ -1,26 +1,21 @@
-@BarAPI_HostAddress = http://localhost:5271
-
-GET {{BarAPI_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
-
-# ============================
-# Cardápio de Bebidas
-# ============================
-
 ### Obter todas as bebidas
 GET http://localhost:5271/api/cardapio
 Accept: application/json
-
-###
 
 ### Obter apenas bebidas alcoólicas
 GET http://localhost:5271/api/cardapio/alcoolicas
 Accept: application/json
 
-###
-
 ### Obter apenas bebidas não alcoólicas
 GET http://localhost:5271/api/cardapio/nao-alcoolicas
 Accept: application/json
+
+### Adicionar uma bebida
+POST http://localhost:5271/api/cardapio
+Content-Type: application/json
+
+{
+    "nome": "Piña Colada",
+    "preco": 22.00,
+    "alcoolica": true
+}

@@ -1,48 +1,65 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using HotelApi.Models;
+using Microsoft.EntityFrameworkCore;
+using BarAPI.Models;
 
 [Route("api/[controller]")]
 [ApiController]
 public class CardapioController : ControllerBase
 {
-    private static List<Bebida> cardapio = new List<Bebida>
+    private readonly AppDataContext _context;
+
+    public CardapioController(AppDataContext context)
     {
-        new Bebida { Id = 1, Nome = "Suco de Laranja", Preco = 5.00M, Alcoolica = false },
-        new Bebida { Id = 2, Nome = "Refrigerante de Cola", Preco = 6.50M, Alcoolica = false },
-        new Bebida { Id = 3, Nome = "Café Expresso", Preco = 4.00M, Alcoolica = false },
-        new Bebida { Id = 4, Nome = "Caipirinha", Preco = 12.00M, Alcoolica = true },
-        new Bebida { Id = 5, Nome = "Cerveja Pilsen", Preco = 8.00M, Alcoolica = true },
-        new Bebida { Id = 6, Nome = "Cup of Jack", Preco = 25.00M, Alcoolica = true },
-        new Bebida { Id = 7, Nome = "Cup of Gin", Preco = 20.00M, Alcoolica = true },
-        new Bebida { Id = 8, Nome = "Choop 150ml", Preco = 10.00M, Alcoolica = true },
-        new Bebida { Id = 9, Nome = "Choop de Vinho", Preco = 15.00M, Alcoolica = true },
-        new Bebida { Id = 10, Nome = "Gin + Tonica", Preco = 30.00M, Alcoolica = true }
-    };
+        _context = context;
+        SeedData();
+    }
+
+    private void SeedData()
+    {
+        if (!_context.Cardapio.Any())
+        {
+            var bebidas = new List<Bebida>
+            {
+                new Bebida { Nome = "Suco de Laranja", Preco = 5.00M, Alcoolica = false },
+                new Bebida { Nome = "Refrigerante de Cola", Preco = 6.50M, Alcoolica = false },
+                new Bebida { Nome = "Café Expresso", Preco = 4.00M, Alcoolica = false },
+                new Bebida { Nome = "Caipirinha", Preco = 12.00M, Alcoolica = true },
+                new Bebida { Nome = "Cerveja Pilsen", Preco = 8.00M, Alcoolica = true },
+                new Bebida { Nome = "Cup of Jack", Preco = 25.00M, Alcoolica = true },
+                new Bebida { Nome = "Cup of Gin", Preco = 20.00M, Alcoolica = true },
+                new Bebida { Nome = "Choop 150ml", Preco = 10.00M, Alcoolica = true },
+                new Bebida { Nome = "Choop de Vinho", Preco = 15.00M, Alcoolica = true },
+                new Bebida { Nome = "Gin + Tonica", Preco = 30.00M, Alcoolica = true }
+            };
+
+            _context.Cardapio.AddRange(bebidas);
+            _context.SaveChanges();
+        }
+    }
 
     [HttpGet]
-    public IEnumerable<Bebida> Get()
+    public async Task<ActionResult<IEnumerable<Bebida>>> Get()
     {
-        return cardapio;
+        return await _context.Cardapio.ToListAsync();
     }
 
     [HttpGet("alcoolicas")]
-    public IEnumerable<Bebida> GetAlcoolicas()
+    public async Task<ActionResult<IEnumerable<Bebida>>> GetAlcoolicas()
     {
-        return cardapio.FindAll(b => b.Alcoolica);
+        return await _context.Cardapio.Where(b => b.Alcoolica).ToListAsync();
     }
 
     [HttpGet("nao-alcoolicas")]
-    public IEnumerable<Bebida> GetNaoAlcoolicas()
+    public async Task<ActionResult<IEnumerable<Bebida>>> GetNaoAlcoolicas()
     {
-        return cardapio.FindAll(b => !b.Alcoolica);
+        return await _context.Cardapio.Where(b => !b.Alcoolica).ToListAsync();
     }
 
     [HttpPost]
-    public IActionResult Post([FromBody] Bebida bebida)
+    public async Task<IActionResult> Post([FromBody] Bebida bebida)
     {
-        bebida.Id = cardapio.Count + 1;
-        cardapio.Add(bebida);
-        return Ok(new { message = "Bebida adicionada ao cardápio!", cardapio });
+        _context.Cardapio.Add(bebida);
+        await _context.SaveChangesAsync();
+        return Ok(new { message = "Bebida adicionada ao cardápio!", bebida });
     }
 }
