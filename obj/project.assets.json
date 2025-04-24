@@ -3688,19 +3688,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Pedro Valeriano\\.nuget\\packages\\": {}
+    "C:\\Users\\mayco\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pedro Valeriano\\BarTopicosdeSistemas\\BarAPI.csproj",
+      "projectUniqueName": "C:\\Users\\mayco\\BarTopicosdeSistemas\\BarAPI.csproj",
       "projectName": "BarAPI",
-      "projectPath": "C:\\Users\\Pedro Valeriano\\BarTopicosdeSistemas\\BarAPI.csproj",
-      "packagesPath": "C:\\Users\\Pedro Valeriano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pedro Valeriano\\BarTopicosdeSistemas\\obj\\",
+      "projectPath": "C:\\Users\\mayco\\BarTopicosdeSistemas\\BarAPI.csproj",
+      "packagesPath": "C:\\Users\\mayco\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mayco\\BarTopicosdeSistemas\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Pedro Valeriano\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\mayco\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3767,8 +3767,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.408/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Ocorreu um erro ao obter os dados de vulnerabilidade do pacote: Não é possível carregar o índice de serviço para a origem https://api.nuget.org/v3/index.json."
+    }
+  ]
 }
