@@ -7,5 +7,7 @@ namespace BarAPI.Models
         public AppDataContext(DbContextOptions<AppDataContext> options) : base(options) { }
 
         public DbSet<Bebida> Cardapio { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
+
     }
 }
