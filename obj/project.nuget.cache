@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lZUiA4GYj6s=",
+  "dgSpecHash": "paSHWo4CGho=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Pedro Valeriano\\Documents\\Bar\\BarAPI\\BarAPI.csproj",
+  "projectFilePath": "C:\\Users\\Pedro Valeriano\\BarTopicosdeSistemas\\BarAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pedro Valeriano\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Pedro Valeriano\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.15\\microsoft.aspnetcore.openapi.8.0.15.nupkg.sha512",

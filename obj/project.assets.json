@@ -3693,11 +3693,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pedro Valeriano\\Documents\\Bar\\BarAPI\\BarAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Pedro Valeriano\\BarTopicosdeSistemas\\BarAPI.csproj",
       "projectName": "BarAPI",
-      "projectPath": "C:\\Users\\Pedro Valeriano\\Documents\\Bar\\BarAPI\\BarAPI.csproj",
+      "projectPath": "C:\\Users\\Pedro Valeriano\\BarTopicosdeSistemas\\BarAPI.csproj",
       "packagesPath": "C:\\Users\\Pedro Valeriano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pedro Valeriano\\Documents\\Bar\\BarAPI\\obj\\",
+      "outputPath": "C:\\Users\\Pedro Valeriano\\BarTopicosdeSistemas\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Pedro Valeriano\\AppData\\Roaming\\NuGet\\NuGet.Config"
