@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mayco\\BarTopicosdeSistemas\\BarAPI.csproj": {}
+    "C:\\Users\\Manut\\OneDrive\\Área de Trabalho\\Duda\\A2TopicosdeSistemas\\BarTopicosdeSistemas\\BarAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mayco\\BarTopicosdeSistemas\\BarAPI.csproj": {
+    "C:\\Users\\Manut\\OneDrive\\Área de Trabalho\\Duda\\A2TopicosdeSistemas\\BarTopicosdeSistemas\\BarAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mayco\\BarTopicosdeSistemas\\BarAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Manut\\OneDrive\\Área de Trabalho\\Duda\\A2TopicosdeSistemas\\BarTopicosdeSistemas\\BarAPI.csproj",
         "projectName": "BarAPI",
-        "projectPath": "C:\\Users\\mayco\\BarTopicosdeSistemas\\BarAPI.csproj",
-        "packagesPath": "C:\\Users\\mayco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mayco\\BarTopicosdeSistemas\\obj\\",
+        "projectPath": "C:\\Users\\Manut\\OneDrive\\Área de Trabalho\\Duda\\A2TopicosdeSistemas\\BarTopicosdeSistemas\\BarAPI.csproj",
+        "packagesPath": "C:\\Users\\Manut\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Manut\\OneDrive\\Área de Trabalho\\Duda\\A2TopicosdeSistemas\\BarTopicosdeSistemas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mayco\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Manut\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -81,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.408/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

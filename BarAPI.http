@@ -19,3 +19,39 @@ Content-Type: application/json
     "preco": 22.00,
     "alcoolica": true
 }
+
+### Obter todos os clientes
+GET http://localhost:5271/api/cliente
+Accept: application/json
+
+### Cadastrar um cliente
+POST http://localhost:5271/api/cliente
+Content-Type: application/json
+
+{
+  "nome": "João Silva",
+  "dataNascimento": "2009-12-18"
+}
+
+### Obter todas as mesas
+GET http://localhost:5271/api/mesas
+Accept: application/json
+
+### Cadastrar uma mesa
+POST http://localhost:5271/api/mesas
+Content-Type: application/json
+
+{
+  "numero": 10,
+  "capacidade": 6,
+  "ocupada": false
+}
+
+### Liberar uma mesa 
+PUT http://localhost:5271/api/mesas/2/liberar
+Accept: application/json
+
+### Apagar uma mesa
+DELETE http://localhost:5271/api/mesas/3
+Accept: application/json
+

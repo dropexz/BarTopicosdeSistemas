@@ -1,9 +1,8 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BarAPI.Models
-{
-    public class Pedido
-    {
+namespace BarAPI.Models{
+    public class Pedido{
+        
         public int Id { get; set; }
 
         public int ClienteId { get; set; }
