@@ -1,3 +1,5 @@
+// Esse codigo serve para
+
 namespace BarAPI.Models{
     public class Mesa{
         public int Id { get; set; }
