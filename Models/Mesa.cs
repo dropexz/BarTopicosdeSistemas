@@ -1,10 +1,8 @@
-// Esse codigo serve para
-
 namespace BarAPI.Models{
     public class Mesa{
-        public int Id { get; set; }
-        public int Numero { get; set; } 
-        public int Capacidade { get; set; } 
-        public bool Ocupada { get; set; }
+        public int Id { get; set; } // Id da mesa.
+        public int Numero { get; set; } // Número da mesa.
+        public int Capacidade { get; set; } // Capacidade máxima de pessoas na mesa.
+        public bool Ocupada { get; set; } // Verifica se a mesa está ocupada ou não.
     }
 }

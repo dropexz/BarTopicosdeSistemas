@@ -2,21 +2,25 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BarAPI.Models;
 
+
 [Route("api/[controller]")]
 [ApiController]
 public class CardapioController : ControllerBase
 {
+    // Banco de dados, necessário para acessar as entidades.
     private readonly AppDataContext _context;
 
+    // Construtor que injeta o contexto e chama a função de inicialização de dados.
     public CardapioController(AppDataContext context)
     {
         _context = context;
-        SeedData();
+        SeedData(); // Inicializa os dados no banco, se necessário.
     }
 
+    // Verifica se o banco de dados já contém dados no cardápio. Se não, adiciona uma lista inicial de bebidas.
     private void SeedData()
     {
-        if (!_context.Cardapio.Any())
+        if (!_context.Cardapio.Any()) // Verifica se já exitem bebidas no cardápio.
         {
             var bebidas = new List<Bebida>
             {
@@ -32,8 +36,8 @@ public class CardapioController : ControllerBase
                 new Bebida { Nome = "Gin + Tonica", Preco = 30.00M, Alcoolica = true }
             };
 
-            _context.Cardapio.AddRange(bebidas);
-            _context.SaveChanges();
+            _context.Cardapio.AddRange(bebidas); // Adicionas as bebidas ao banco.
+            _context.SaveChanges(); // Salva as bebidas no banco.
         }
     }
 
@@ -43,23 +47,26 @@ public class CardapioController : ControllerBase
         return await _context.Cardapio.ToListAsync();
     }
 
+    // Rota para obter as bebidas alcoólicas.
     [HttpGet("alcoolicas")]
     public async Task<ActionResult<IEnumerable<Bebida>>> GetAlcoolicas()
     {
-        return await _context.Cardapio.Where(b => b.Alcoolica).ToListAsync();
+        return await _context.Cardapio.Where(b => b.Alcoolica).ToListAsync(); // Filtra bebidas alcoólicas. 
     }
 
+    // Rota para obter as bebidas não alcóolicas.
     [HttpGet("nao-alcoolicas")]
     public async Task<ActionResult<IEnumerable<Bebida>>> GetNaoAlcoolicas()
     {
-        return await _context.Cardapio.Where(b => !b.Alcoolica).ToListAsync();
+        return await _context.Cardapio.Where(b => !b.Alcoolica).ToListAsync(); // Filtra bebidas não alcoólicas.
     }
 
+    // Rota para adicionar uma bebida nova ao cardáapio.
     [HttpPost]
     public async Task<IActionResult> Post([FromBody] Bebida bebida)
     {
-        _context.Cardapio.Add(bebida);
-        await _context.SaveChangesAsync();
+        _context.Cardapio.Add(bebida); // Adiciona nova bebida ao banco.
+        await _context.SaveChangesAsync(); // Salva as mudanças no banco.
         return Ok(new { message = "Bebida adicionada ao cardápio!", bebida });
     }
 }
