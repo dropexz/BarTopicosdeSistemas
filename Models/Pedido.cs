@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace BarAPI.Models{
     public class Pedido{
         
+        
         public int Id { get; set; } // Id do pedido.
 
         public int ClienteId { get; set; } // Id do cliente que fez o pedido.
