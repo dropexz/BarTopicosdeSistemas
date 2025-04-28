@@ -15,6 +15,7 @@ public class ClienteController : ControllerBase
         _context = context;
     }
 
+
     // Rota para obter os clientes cadastrados.
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Cliente>>> Get()
