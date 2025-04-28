@@ -55,3 +55,12 @@ Accept: application/json
 DELETE http://localhost:5271/api/mesas/3
 Accept: application/json
 
+### Realizar um novo pedido
+POST http://localhost:5271/api/pedido
+Content-Type: application/json
+
+{
+  "ClienteId": 3,
+  "BebidaId": 9,
+  "DataPedido": "2025-05-27T12:00:00"
+}

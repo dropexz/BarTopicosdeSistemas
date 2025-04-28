@@ -1,3 +1,5 @@
+// Esse arquivo faz a implementação do controlador de mesas, que gerencia as operações CRUD (Criar, Ler, Atualizar e Deletar) para a entidade Mesa.
+// Ele permite que o cliente interaja com as mesas do bar, como cadastrar novas mesas, liberar mesas ocupadas e remover mesas do sistema.
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BarAPI.Models;
